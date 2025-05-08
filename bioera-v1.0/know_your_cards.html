@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioEra - Home</title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <style>
+        .dialog {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            z-index: 1000;
+            display: none;
+        }
+        .dialog button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left-section">
+                <div>
+                    <img style="width: 110px; height: 70px; padding-right: 10px;" src="images/bioera_logo_black.png" alt="BioEra Logo">
+                    <p class="header-subtitle">Play, Learn, Collect</p>
+                </div>
+                <nav class="nav-menu">
+                    <a href="home.html">Home</a>
+                    <a href="#">Events</a>
+                    <a href="#">Store</a>
+                    <a href="learn-more.html">About</a>
+                </nav>
+            </div>
+            <div class="shopping-cart">
+                <a href="#" onclick="toggleCart(event)"><i class="fas fa-cart-shopping"></i></a>
+                <div id="cart">
+                    <h3>Cart</h3>
+                    <p>Your cart is empty.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section purpose-section">
+        <div class="purpose-content">
+            <p id="purpose-title" style="padding-top: 2rem;">Know Your Cards</p>
+            <p id="purpose-subtitle">Lifeforms are the building blocks of your ecosystem. You can identify their trophic level by color</p>
+            <img src="images/card_specs.png" alt="Promo Picture KST">
+        </div>
+    </section>
+
+    <div id="promo-wrapper">
+        <section id="promo" style="align-items: start;">
+        <div>
+            <p id="purpose-title" style="color: rgb(255, 255, 255);">BioEra is almost here</p>
+            <p style="color: rgba(255, 255, 255, 0.785);">Reserve Your BioEra™ Spot: Unlock Launch Perks & Preorder Exclusives!</p>
+            <div class="space-y-4">
+                <input id="email" name="email" placeholder="Your Email" type="text" required style="width: 50%; padding: 0.5rem; border-radius: 5px; border: 1px solid #cccccc00; font-family: 'Lexend', sans-serif; color: black;" />
+                <button onclick="submitEmail()" class="bg-green-700 text-white p-3 rounded hover:bg-blue-600" style="padding: 10px 25px 10px 25px; margin-left: 2rem;">Submit</button>
+            </div>
+            <p id="message" class="mt-4 text-left"></p>
+        </div>
+        </section>
+        <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=61564506149516" target="_blank"><i class="fab fa-facebook-f" style="padding-right: 10px;"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram" style="padding-right: 10px;"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube" style="padding-right: 10px;"></i></a>
+        </div>
+        <p style="font-size: 0.8rem; padding-top: 0.8rem; color: rgba(255, 255, 255, 0.637);">By clicking the subscribe you accept out Terms and Condicions and Policy Privacy</p>
+    </div>
+
+
+    <!-- <div id="promo-wrapper">
+        <section id="promo" style="align-items: start;">
+            <p id="purpose-title" style="color: rgb(255, 255, 255);">BioEra is almost here</p>
+            <p style="color: rgba(255, 255, 255, 0.785);">Reserve Your BioEra™ Spot: Unlock Launch Perks & Preorder Exclusives!</p>
+            <form action="" style="margin-top: 2rem; display: flex; align-items: center; gap: 1rem; justify-content: left;">
+                <input id="email" name="email" placeholder="Your Email" type="text" required style="width: 50%; padding: 0.5rem; border-radius: 5px; border: 1px solid #cccccc00; font-family: 'Lexend', sans-serif;" />
+                <input type="submit" id="subscribe-btn" value="Subscribe" class="button" style="padding: 0.5rem 2rem; border-radius: 5px; cursor: pointer; font-weight: 600; border: 1px solid #cccccc00; font-family: 'Lexend', sans-serif;" />
+                <div id="success-message" style="height: 0; min-height: 0; overflow: hidden; font-family: 'Lexend', sans-serif; font-size: 1rem; text-align: center; transition: height 0.3s ease, min-height 0.3s ease;"></div>
+            </form>
+        </section>
+        
+    </div> -->
+    <div id="footer-wrapper">
+            <div id="copyright">
+                <p>© 2025 Tlanimi. All rights reserved. | Santa Clara, CA 95050, USA</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="firebase.js"></script>
+
+</html>

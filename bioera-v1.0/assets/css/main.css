@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css?family=Lexend:300,400,600");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One");
+
+/***** HEADER STYLES *****/
+/* BIOERA Logo Header */
+#bioera-logo {
+	width: 110px; 
+	height: 70px; 
+	padding-right: 10px;
+}
+/* Navigation menu */
+.nav-menu {
+	display: flex;
+	gap: 20px;
+	flex: 0 0 auto;
+	margin: 0 auto;
+}
+.nav-menu a {
+	color: #544c3f;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+	transition: color 0.3s ease;
+	font-family: 'Lexend', Arial, sans-serif;
+	padding-right: 2rem;
+}
+.nav-menu a:hover {
+	color: #d3db7f;
+}
+/* Shopping cart PENDING*/
+.shopping-cart {
+	flex: 0 0 auto;
+}
+.shopping-cart a {
+	color: #ffffff00;
+	text-decoration: none;
+	font-size: 24px;
+	padding: 8px;
+	border-radius: 50%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.shopping-cart a:hover {
+	transform: scale(1.1);
+}
+#cart {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 250px;
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	display: none;
+	z-index: 10;
+}
+#cart h3 {
+	margin: 0 0 10px;
+	color: #39b230;
+}
+#cart p {
+	margin: 0;
+	color: #8a7b62;
+}
+
+/****** SECTION 1 *******/
+/* Specific styles for Play BioEra section */
+.purpose-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(248, 248, 245);
+    padding: 2rem 2rem 5rem 2rem;
+    gap: 2rem;
+}
+/* Style for the image */
+.purpose-image {
+    flex: 0 0 auto;
+}
+
+.purpose-image img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Style for the content (title, subtitle, button) */
+.purpose-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+/* Ensure existing #purpose-title styles are respected */
+#purpose-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 50px;
+    color: #554c3d;
+    margin: 0;
+}
+
+/* Style for the subtitle */
+.purpose-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #544c3f;
+    margin: 0;
+    line-height: 2rem;
+	padding-top: 2rem;
+}
+
+/**********  ***********/
+
+#continent-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#globe-container {
+    width: 100%;
+    height: 385px; /* Matches your globe's height */
+}
+
+#continent-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.continent-btn {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+	font-family: 'Lexend', Arial, sans-serif;
+	font-weight: 600;
+    color: #554c3d;
+    background-color: rgb(255, 255, 255);
+	border: 2px solid #554c3d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .continent-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Your existing styles (unchanged) */
+header {
+	position: relative;
+	/* background-image: url("assets/css/images/overlay.png"), linear-gradient(75deg, #40925a 15%, #2bab53 55%);
+	background-color: rgba(242, 242, 232, 0.562); */
+	background-color: rgb(242, 242, 232);
+
+	background-size: 128px 128px, 100% 100%, auto;
+	background-repeat: repeat, no-repeat, no-repeat;
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+}
+.header-content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header-left-section {
+	display: flex;
+	align-items: center;
+	flex: 1;
+}
+.header-title {
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 5px;
+	color: rgb(255, 255, 255);
+}
+.header-subtitle {
+	font-size: 12px;
+	font-weight: 600;
+	margin-top: 2px;
+	color: #544c3f;
+}
+body {
+	font-family: 'Lexend', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 19px;
+	margin: 0;
+	padding: 0;
+	color: #544c3f;
+	/* background-image: linear-gradient(100deg, #eedbb3 10%, #f4eabc 40%, #eedbb3 50%);
+	background-color: #eae494; */
+	background-repeat: repeat, no-repeat, no-repeat;
+}
+
+/* Ensure button styling is consistent */
+#learn-more .button {
+    background: #6DB491;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 600;
+    padding: 12px 40px;
+    border-radius: 50px;
+    border: 1px solid #00000006;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .purpose-section {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .purpose-image img {
+        max-width: 100%;
+    }
+
+    .purpose-content {
+        padding: 0 1rem;
+    }
+
+    #purpose-title {
+        font-size: 2rem;
+    }
+
+    .purpose-subtitle {
+        font-size: 1rem;
+    }
+}
+.section img {
+	/* height: 19rem; */
+	margin: 1.1rem auto auto auto;
+}
+.section p{
+	/* margin: 2rem 6rem 2.5rem 6rem; */
+}
+#purpose-title {
+	font-family: Paytone One; 
+	margin: 0rem auto 0rem auto; 
+	font-size: 45px;
+	color: #554c3d;
+}
+.bioera-keywords-title
+{
+	font-family: Paytone One; 
+	margin: 5px; 
+	margin-top: 10px;
+	font-size: 38px;
+}
+.bioera-keywords-subtitle
+{
+	margin: 12px; 
+	margin-bottom: 4rem;
+	font-size: 27px;
+	font-weight: 200;
+
+}
+#section-two {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	/* background-color: #DFD7BF; */
+	color: #544c3f;
+	padding: 2rem 2rem 7rem 2rem;
+}
+#section-two img {
+	flex: 0 0 auto;
+	height: 13.2rem;
+	padding: 0%;
+	/* margin: 2rem 0 2rem 0; */
+}
+#section-two p {
+	width: 100%;
+}
+#section-continent {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	background-color: #CEE6F3;
+	color: #544c3f;
+}
+#promo-wrapper {
+	position: relative;
+	background-image: linear-gradient(5deg, #6DB491 10%, #d5bb90f9 40%, #6DB491 50%);
+	background-size:cover;
+	background-position: top left, center center;
+	color: #fff;
+	text-align: start;
+	background-color: #5F939A;
+	padding: 5.5rem 0 5.5em 5.5rem;
+}
+#promo-wrapper-top {
+	position: relative;
+	background-image: url("assets/css/images/overlay.png"), url("assets/css/images/promo.jpg");
+	background-size: 192px 192px, cover;
+	background-position: top left, center center;
+	color: #000000b3;
+	text-align: center;
+	font-size: 22px;
+}
+#learn-more .button {
+	margin: 0 0 2rem;
+	background: #6DB491;
+	color: #fff;
+	font-size: 0.75em;
+	font-weight: 600;
+	padding: 12px 40px;
+	border-radius: 50px;
+	border: 1px solid #00000006;
+	text-decoration: none;
+	display: inline-block;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#submit .button {
+	margin: 2rem;
+	background: #3571ea;
+	color: #fff;
+	font-size: 0.6em;
+	font-weight: 600;
+	padding: 15px 50px;
+	border-radius: 50px;
+	border: 1px solid #00000006;
+	text-decoration: none;
+	display: inline-block;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#clear .button {
+	margin: 2rem;
+	background: #626b7b;
+	color: #fff;
+	font-size: 0.6em;
+	font-weight: 600;
+	padding: 15px 50px;
+	border-radius: 50px;
+	border: 1px solid #00000006;
+	text-decoration: none;
+	display: inline-block;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#promo .button {
+	background: #1b7b4d;
+	color: #fff;
+	font-size: 0.8em;
+	padding: 12px 30px;
+	border-radius: 50px;
+	text-decoration: none;
+	border: 1px solid #0000006d;
+	/* display: inline-block; */
+	/* transition: background-color 0.3s ease, transform 0.2s ease; */
+	/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+/* #promo .button:hover {
+	background: #288a20;
+	transform: scale(1.05);
+} */
+#footer-wrapper {
+	background-size: 128px 128px, auto;
+	background-repeat: repeat, no-repeat;
+	padding: 1em 0 1em 0;
+	text-align: center;
+}
+#footer {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	text-align: center;
+}
+#footer h2 {
+	font-family: 'Paytone One', sans-serif;
+	color: #ffffff;
+	margin-bottom: 1rem;
+}
+#footer p {
+	color: rgba(255, 255, 255, 0.8);
+	margin-bottom: 2rem;
+}
+.footer-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	gap: 20px;
+}
+.footer-col {
+	flex: 1;
+	min-width: 300px;
+}
+.bio-online-form input[type="text"],
+.bio-online-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid rgba(58, 51, 51, 0.5);
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.701);
+	color: rgb(45, 42, 42);
+}
+.bio-online-form textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+.bio-online-form input[type="submit"],
+.bio-online-form input[type="reset"] {
+	background: #3b8c95;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	font-family: 'Lexend', sans-serif;
+	font-weight: 600;
+}
+.bio-online-form input[type="submit"]:hover,
+.bio-online-form input[type="reset"]:hover {
+	background: #3b8c95;
+	transform: scale(1.05);
+}
+.contact-form input[type="text"],
+.contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.1);
+	color: #ffffff;
+	font-family: 'Lexend', sans-serif;
+}
+.contact-form textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+.contact-form input[type="submit"],
+.contact-form input[type="reset"] {
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	font-family: 'Lexend', sans-serif;
+}
+.contact-form input[type="submit"]:hover,
+.contact-form input[type="reset"]:hover {
+	transform: scale(1.05);
+}
+.form-actions {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+.social-media {
+	padding-top: 2.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+.social-media a {
+	color: #ffffff88;
+	text-decoration: none;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	transition: color 0.3s ease;
+}
+.social-media a:hover {
+	color: #3b8c95;
+}
+.social-media .icon {
+	margin-right: 5px;
+	font-size: 1.5rem;
+}
+#copyright {
+	font-size: 0.9rem;
+}
+#copyright p {
+	color: #000;
+}
+@media (max-width: 768px) {
+	.header-content {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.header-left-section {
+		width: 100%;
+	}
+	.nav-menu {
+		margin: 10px 0;
+		width: 100%;
+		text-align: center;
+	}
+	.shopping-cart {
+		margin-top: 10px;
+		align-self: flex-end;
+	}
+	.footer-row {
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer-col {
+		min-width: 100%;
+	}
+
+	#signup-form {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		position: relative; }
+		#signup-form input[type="text"],
+		#signup-form input[type="password"],
+		#signup-form input[type="email"] {
+		  width: 18em; }
+		#signup-form > * {
+		  margin: 0 0 0 1em; }
+		#signup-form > :first-child {
+		  margin: 0 0 0 0; }
+		@media screen and (max-width: 480px) {
+		  #signup-form {
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column; }
+			#signup-form input[type="type"],
+			#signup-form input[type="password"],
+			#signup-form input[type="email"] {
+			  width: 100%; }
+			#signup-form > * {
+			  margin: 1.25em 0 0 0; }
+			#signup-form .message {
+			  bottom: -1.5em;
+			  font-size: 0.9em;
+			  height: 1em;
+			  left: 0;
+			  line-height: inherit;
+			  margin-top: 0;
+			  position: absolute; } 
+			  }
+			  .dot {
+				height: 25px;
+				width: 25px;
+				background-color: #bbb;
+				border-radius: 50%;
+				display: inline-block;
+			  }
+			  
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Collection App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        // Import Firebase SDK
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js';
+        import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js';
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD53oyOKX0rQHVP5WXm6mQQT6yMxRY3Oto",
+            authDomain: "bioera-test-v0.firebaseapp.com",
+            projectId: "bioera-test-v0",
+            storageBucket: "bioera-test-v0.firebasestorage.app",
+            messagingSenderId: "109807797212",
+            appId: "1:109807797212:web:64f9838578af64ecb24519",
+            measurementId: "G-TEPZXTY17G"
+        };
+
+        // Initialize Firebase
+        try {
+            const app = initializeApp(firebaseConfig);
+            window.db = getFirestore(app);
+            console.log('Firebase initialized successfully');
+        } catch (error) {
+            console.error('Firebase initialization failed:', error);
+            document.getElementById('message').textContent = 'Failed to connect to Firebase.';
+            document.getElementById('message').className = 'mt-4 text-center text-red-500';
+        }
+
+        // Submit email function
+        window.submitEmail = async function() {
+            const emailInput = document.getElementById('emailInput').value;
+            const messageElement = document.getElementById('message');
+
+            if (!emailInput) {
+                messageElement.textContent = 'Please enter an email.';
+                messageElement.className = 'mt-4 text-center text-red-500';
+                return;
+            }
+
+            try {
+                await addDoc(collection(window.db, 'emails'), {
+                    email: emailInput,
+                    timestamp: serverTimestamp()
+                });
+                messageElement.textContent = 'Email submitted successfully!';
+                messageElement.className = 'mt-4 text-center text-green-500';
+                document.getElementById('emailInput').value = '';
+            } catch (error) {
+                console.error('Error adding email:', error.message, error.code);
+                messageElement.textContent = `Error: ${error.message} (${error.code})`;
+                messageElement.className = 'mt-4 text-center text-red-500';
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Email Signup</h1>
+        <div class="space-y-4">
+            <input type="email" id="emailInput" placeholder="Enter your email" class="w-full p-2 border rounded">
+            <button onclick="submitEmail()" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Submit</button>
+        </div>
+        <p id="message" class="mt-4 text-center"></p>
+    </div>
+</body>
+</html>
