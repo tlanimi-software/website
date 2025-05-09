@@ -12,7 +12,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Three.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+     <link rel="stylesheet" href="/bioera-v1.0/assets/css/main.css">
     <style>
         .dialog {
             position: fixed;
@@ -38,7 +39,7 @@
     <header>
         <div class="header-content">
             <div>
-                <img id="bioera-logo" src="/assets/images/bioera_logo_black.png" alt="BioEra Logo">
+                <img id="bioera-logo" src="/bioera-v1.0/assets/images/bioera_logo_black.png" alt="BioEra Logo">
                 <p class="header-subtitle">Play, Learn, Collect</p>
             </div>
             <nav class="nav-menu">
@@ -72,7 +73,7 @@
         <p id="purpose-title" style="text-align: center; padding: 2rem;">Build an ecosystem and win!</p>
         <section class="section purpose-section" style="padding: 0;">
             <div class="purpose-content">
-                <h3>Know your cards</h3>
+                <h1 style="padding-top: 1rem; font-weight: 600;">Know your cards</h1>
                 <img src="images/know_your_cards(1).png" alt="Section 2 Image 1">
                 <p style="padding: 1rem;">There are two kinds of cards: Lifeforms and Phenomena.</p>
                 <div id="learn-more">
@@ -82,7 +83,7 @@
         </section>
         <section class="section purpose-section" style="padding: 0;">
             <div class="purpose-content">
-                <h3>Ecosystem Rules</h3>
+                <h2 style="padding-top: 1rem; font-weight: 600;">Ecosystem Rules</h2>
                 <img src="images/ecosystem.png" alt="Section 2 Image 1">
                 <p style="padding: 1rem;">Build your wildlife and create a long lasting ecosystem.</br></p>
                 <div id="learn-more">
@@ -109,6 +110,8 @@
                     <button class="continent-btn" data-continent="South America">South America</button>
                 </div>
             </div>
+            <p class="purpose-subtitle" style="padding: 0 0 2rem 0;">Which continent would you like to play? Click on one of the buttons</p>
+
         </div>
     </section>
 
@@ -129,6 +132,8 @@
             <a href="https://www.facebook.com/profile.php?id=61564506149516" target="_blank"><i class="fab fa-facebook-f" style="padding-right: 10px;"></i></a>
             <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram" style="padding-right: 10px;"></i></a>
             <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube" style="padding-right: 10px;"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-twitter" style="padding-right: 10px;"></i></a>
+
         </div>
         <p style="font-size: 0.8rem; padding-top: 0.8rem; color: rgba(255, 255, 255, 0.637);">By clicking the subscribe you accept out Terms and Condicions and Policy Privacy</p>
     </div>
@@ -164,7 +169,7 @@
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera(62, window.innerWidth / 385, 0.1, 1000);
             const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-            renderer.setSize(window.innerWidth * 0.78, 385); // Match container height
+            renderer.setSize(window.innerWidth * 0.8, 355); // Match container height
             renderer.setClearColor(0x000000, 0);
             document.getElementById('globe-container').appendChild(renderer.domElement);
     

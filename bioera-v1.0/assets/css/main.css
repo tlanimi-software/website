@@ -123,8 +123,8 @@
 }
 
 #globe-container {
-    width: 100%;
-    height: 385px; /* Matches your globe's height */
+    /* width: 100%; */
+    height: 350px; /* Matches your globe's height */
 }
 
 #continent-buttons {
@@ -142,7 +142,7 @@
 	font-weight: 600;
     color: #554c3d;
     background-color: rgb(255, 255, 255);
-	border: 2px solid #554c3d;
+	border: 1.5px solid #554c3d96;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -196,7 +196,7 @@ header {
 body {
 	font-family: 'Lexend', Arial, sans-serif;
 	font-weight: 400;
-	font-size: 19px;
+	font-size: 17px;
 	margin: 0;
 	padding: 0;
 	color: #544c3f;
@@ -491,7 +491,7 @@ body {
 	transition: color 0.3s ease;
 }
 .social-media a:hover {
-	color: #3b8c95;
+	color: #53825c;
 }
 .social-media .icon {
 	margin-right: 5px;
