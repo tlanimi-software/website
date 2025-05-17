@@ -7,7 +7,7 @@
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Firebase CDN -->
-    <script type="module" src="firebase.js"></script>
+    <script type="module" src="/bioera-v1.0/firebase.js"></script>
     <!-- Fonts and colors -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Three.js CDN -->
@@ -42,12 +42,12 @@
                 <img id="bioera-logo" src="/bioera-v1.0/assets/images/bioera_logo_black.png" alt="BioEra Logo">
                 <p class="header-subtitle">Play, Learn, Collect</p>
             </div>
-            <nav class="nav-menu">
+            <!-- <nav class="nav-menu">
                 <a href="home.html">Home</a>
                 <a href="submit_firebase.html">Events</a>
                 <a href="#">Store</a>
                 <a href="learn-more.html">About</a>
-            </nav>
+            </nav> -->
             <div class="shopping-cart">
                 <a href="#" onclick="toggleCart(event)"><i class="fas fa-cart-shopping"></i></a>
                 <div id="cart">
@@ -58,13 +58,21 @@
         </div>
     </header>
     <!-- Section 1: BioEra intro with purpose statement -->
-    <section class="section purpose-section">
-        <div class="purpose-image">
+    <section class="section purpose-section1">
+        <!-- <div class="purpose-image">
             <img src="images/kickstart_promo.png" alt="Promo Picture KST">
-        </div>
+        </div> -->
         <div class="purpose-content">
-            <p id="purpose-title">Play BioEra</p>
-            <p class="purpose-subtitle">BioEra rewards the curiosity of young minds through an engaging card game <br> that makes learning about nature fun.</p>
+            <p id="purpose-title" style="color: #745d41; 	text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff; /* Creates a 1px black border around the text */">Play BioEra</p>
+            <p class="purpose-subtitle" style="color: antiquewhite; 	text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; /* Creates a 1px black border around the text */" >BioEra rewards the curiosity of young minds through an engaging card game <br> that makes learning about nature fun.</p>
         </div>
     </section>
 
@@ -87,7 +95,7 @@
                 <img src="images/ecosystem.png" alt="Section 2 Image 1">
                 <p style="padding: 1rem;">Build your wildlife and create a long lasting ecosystem.</br></p>
                 <div id="learn-more">
-                    <a href="learn-more.html" class="button" style="background: #FEA236;">Explore</a>
+                    <a class="button" style="background: #FEA236;">Coming soon</a>
                 </div>
             </div>
         </section>
@@ -110,7 +118,7 @@
                     <button class="continent-btn" data-continent="South America">South America</button>
                 </div>
             </div>
-            <p class="purpose-subtitle" style="padding: 0 0 2rem 0;">Which continent would you like to play? Click on one of the buttons</p>
+            <p class="purpose-subtitle" style="padding: 0 0 2rem 0;">Which continent you want to play with Bioera? Click in one of the buttons above</p>
 
         </div>
     </section>
@@ -148,7 +156,7 @@
     </section>
     <div id="footer-wrapper">
             <div id="copyright">
-                <p>© 2025 Tlanimi. All rights reserved. | Santa Clara, CA 95050, USA</p>
+                <p>© 2024 Tlanimi. All rights reserved. | Santa Clara, CA 95050, USA</p>
             </div>
         </div>
     </div>
